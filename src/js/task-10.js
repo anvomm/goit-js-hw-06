@@ -9,15 +9,15 @@ refs.input.addEventListener('input', onInputEvent);
 refs.createButton.addEventListener('click', onCreateButtonClickEvent);
 refs.destroyButton.addEventListener('click', onDestroyButtonClickEvent);
 
-let count = 0;
+let enteredNumber = 0;
 
 function onInputEvent(event) {
-  count = event.target.value;
-  return count;  
+  enteredNumber = event.target.value;
+  return enteredNumber;  
 }
 
 function onCreateButtonClickEvent() {
-  createBoxes(count);
+  createBoxes(enteredNumber);
 };
 
 function onDestroyButtonClickEvent() {
