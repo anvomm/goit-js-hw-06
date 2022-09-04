@@ -3,9 +3,8 @@ const refs = {
     text: document.querySelector('#text'),
 }
 
-refs.input.addEventListener('input', onInputRunnerMovement);
+refs.input.addEventListener('input', onInputRunnerMovementEvent);
 
-function onInputRunnerMovement(event) {
-    
+function onInputRunnerMovementEvent(event) {
     refs.text.style.fontSize = `${event.currentTarget.value}px`;
 }

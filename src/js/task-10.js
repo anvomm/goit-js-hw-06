@@ -21,8 +21,7 @@ function onCreateButtonClickEvent() {
 };
 
 function onDestroyButtonClickEvent() {
-  const boxes = document.querySelectorAll('.box');
-  boxes.forEach(box => box.remove());
+  destroyBoxes();
 }
 
 function createBoxes(amount) {
@@ -36,6 +35,11 @@ function createBoxes(amount) {
     element.style.backgroundColor = getRandomHexColor();
   })
 
+}
+
+function destroyBoxes() {
+  const boxes = document.querySelectorAll('.box');
+  boxes.forEach(box => box.remove());
 }
 
 function getRandomHexColor() {
