@@ -1,14 +1,9 @@
-const refs = {
-    form: document.querySelector('.login-form'),
-    inputs: document.querySelectorAll('input'),
-}
+const form = document.querySelector('.login-form');
 
-refs.form.addEventListener('submit', onSubmitEvent);
+form.addEventListener('submit', onSubmitEvent);
 
 function onSubmitEvent(event) {
     event.preventDefault();
-
-    //const data = {};
 
     const {
     elements: { email, password }
@@ -18,22 +13,10 @@ function onSubmitEvent(event) {
         return alert("Please fill in all the fields!");
     };
 
-    const data = {
+    console.log({
         email: email.value,
         password: password.value,
-    };
-
-    /* refs.inputs.forEach(input => data[input.getAttribute('name')] = '');
-
-    for (const key in data) {
-        console.log(key.value)
-        data[key] = refs.form.elements.key.value;
-        console.log(email.value)
-    } */
-    
-
-
-    console.log(data);
+    })
 
     event.currentTarget.reset();
 }
