@@ -38,8 +38,7 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  const boxes = document.querySelectorAll('.box');
-  boxes.forEach(box => box.remove());
+  refs.boxesContainer.innerHTML = '';
 }
 
 function getRandomHexColor() {
