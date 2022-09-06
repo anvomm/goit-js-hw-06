@@ -18,6 +18,8 @@ function onInputEvent(event) {
 
 function onCreateButtonClickEvent() {
   createBoxes(enteredNumber);
+  refs.input.value = '';
+  enteredNumber = 0;
 };
 
 function onDestroyButtonClickEvent() {
@@ -38,9 +40,7 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  refs.boxesContainer.innerHTML = '';
-  refs.input.value = '';
-  enteredNumber = 0;
+  refs.boxesContainer.innerHTML = '';  
 }
 
 function getRandomHexColor() {
