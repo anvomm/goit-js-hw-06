@@ -40,6 +40,7 @@ function createBoxes(amount) {
 function destroyBoxes() {
   refs.boxesContainer.innerHTML = '';
   refs.input.value = '';
+  enteredNumber = 0;
 }
 
 function getRandomHexColor() {
